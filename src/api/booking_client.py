@@ -46,7 +46,7 @@ class BookingApiClient:
 
     # @retry(stop=stop_after_delay(3))
     def delete_booking(self, booking_id):
-        delete = self.auth_session.post(f"{BASE_URL}/booking/{booking_id}")
+        delete = self.auth_session.delete(f"{BASE_URL}/booking/{booking_id}")
         if delete.status_code not in (200, 204):
             delete.raise_for_status()
         return delete.status_code

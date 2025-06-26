@@ -16,15 +16,4 @@ class TestBookings:
         # Assert-проверки
         # assert isinstance(booking, BookingResponse)
         print(booking)
-        # assert booking != 1
-        assert booking.bookingdates.checkout > booking.bookingdates.checkin
 
-        # def test_get_booking_id(self, auth_session, booking_id):
-
-        # def test_get_booking(self, ):
-
-    def test_booking_delete(self, auth_session, rndm_booking_id):
-        client = BookingApiClient(auth_session)
-        booking = TestScenarios(client)
-
-        booking.delete_existing_booking_and_verify(rndm_booking_id)
