@@ -1,8 +1,7 @@
-
-import pytest
 from pydantic import BaseModel, ValidationError
 from requests import Response
 from typing import Type
+import pytest
 
 
 def validate_response(
